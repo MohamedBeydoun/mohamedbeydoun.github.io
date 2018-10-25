@@ -1,21 +1,13 @@
-.fa-arrow-alt-circle-left {
-    color: #ffffff;
-    position: absolute;
-    top: 10%;
-    left: 12%;
-    transition: transform 0.7s, color 0.7s;
-    }
-
-.fa-arrow-alt-circle-left:hover {
-    color: #296829;
-    transform: scale(1.2);
+body {
+    margin-top: 3%;
 }
 
 h1 {
-    position: absolute;
+    position: relative;
     top: 5%;
     left: 30%;
     font-size: 70px;
+    margin-bottom: 100px;
 }
 
 h2 {
@@ -26,7 +18,7 @@ h2 {
 }
 
 ul {
-    position: absolute;
+    position: relative;
     top: 25%;
     left: 10%;
 }
