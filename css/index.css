@@ -15,10 +15,20 @@ li a {
     text-decoration: none;
     color: #ffffff;
     line-height: 50px;
-    font-size: 30px;
+    margin-bottom: -10px !important;
 }
 
-.buttonList {
+img {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border-radius: 50%;
+    border: solid #296829 8px;
+}
+
+#buttonList {
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -38,7 +48,7 @@ li a {
     -webkit-align-items: center;
   }
 
-  .buttonList a {
+  #buttonList a {
     padding: 0.7em calc(0.7em * 1.2);
     display: inline-block;
     border: 3px solid transparent;
@@ -48,13 +58,13 @@ li a {
     letter-spacing: 0.07em;
   }
 
-  .buttonList a .text {
+  #buttonList a .text {
     font-family: proxima-nova, monospace;
     transform: translate3d(0, 0.7em, 0);
     display: block;
     transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
   }
-  .buttonList a:after {
+  #buttonList a:after {
     position: absolute;
     content: '';
     bottom: -3px;
@@ -65,76 +75,76 @@ li a {
     transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
     transform-origin: left;
   }
-  .buttonList .line {
+  #buttonList .line {
     position: absolute;
     background: #296829;
   }
-  .buttonList .line.-right, .buttonList .line.-left {
+  #buttonList .line.-right, #buttonList .line.-left {
     width: 3px;
     bottom: -3px;
     top: -3px;
     transform: scale3d(1, 0, 1);
   }
-  .buttonList .line.-top, .buttonList .line.-bottom {
+  #buttonList .line.-top, #buttonList .line.-bottom {
     height: 3px;
     left: -3px;
     right: -3px;
     transform: scale3d(0, 1, 1);
   }
-  .buttonList .line.-right {
+  #buttonList .line.-right {
     right: -3px;
     transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
     transform-origin: top;
   }
-  .buttonList .line.-top {
+  #buttonList .line.-top {
     top: -3px;
     transition: transform 0.08s linear 0.43s;
     transform-origin: left;
   }
-  .buttonList .line.-left {
+  #buttonList .line.-left {
     left: -3px;
     transition: transform 0.08s linear 0.51s;
     transform-origin: bottom;
   }
-  .buttonList .line.-bottom {
+  #buttonList .line.-bottom {
     bottom: -3px;
     transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
     transform-origin: right;
   }
-  .buttonList a:hover .text,
-  .buttonList a:active .text {
+  #buttonList a:hover .text,
+  #buttonList a:active .text {
     transform: translate3d(0, 0, 0);
     transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
   }
-  .buttonList a:hover:after,
-  .buttonList a:active:after {
+  #buttonList a:hover:after,
+  #buttonList a:active:after {
     transform: scale3d(0, 1, 1);
     right: -3px;
     left: -3px;
     transform-origin: right;
     transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
   }
-  .buttonList a:hover .line,
-  .buttonList a:active .line {
+  #buttonList a:hover .line,
+  #buttonList a:active .line {
     transform: scale3d(1, 1, 1);
   }
-  .buttonList a:hover .line.-right,
-  .buttonList a:active .line.-right {
+  #buttonList a:hover .line.-right,
+  #buttonList a:active .line.-right {
     transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
     transform-origin: bottom;
   }
-  .buttonList a:hover .line.-top,
-  .buttonList a:active .line.-top {
+  #buttonList a:hover .line.-top,
+  #buttonList a:active .line.-top {
     transition: transform 0.08s linear 0.4s;
     transform-origin: right;
   }
-  .buttonList a:hover .line.-left,
-  .buttonList a:active .line.-left {
+  #buttonList a:hover .line.-left,
+  #buttonList a:active .line.-left {
     transition: transform 0.08s linear 0.48s;
     transform-origin: top;
   }
-  .buttonList a:hover .line.-bottom,
-  .buttonList a:active .line.-bottom {
+  #buttonList a:hover .line.-bottom,
+  #buttonList a:active .line.-bottom {
     transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
     transform-origin: left;
   }
