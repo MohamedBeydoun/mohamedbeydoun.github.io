@@ -25,7 +25,7 @@ img {
     top: 20%;
     left: 50%;
     border-radius: 50%;
-    border: solid #296829 8px;
+    border: solid #f26522 8px;
 }
 
 #buttonList {
@@ -71,13 +71,13 @@ img {
     left: calc(0.7em * 1.2);
     right: calc(0.7em * 1.2);
     height: 3px;
-    background: #296829;
+    background: #f26522;
     transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
     transform-origin: left;
   }
   #buttonList .line {
     position: absolute;
-    background: #296829;
+    background: #f26522;
   }
   #buttonList .line.-right, #buttonList .line.-left {
     width: 3px;

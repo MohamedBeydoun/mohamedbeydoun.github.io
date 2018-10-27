@@ -1,9 +1,9 @@
 html {
     overflow-x: hidden;
     min-width: 1200px;
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #0c280c, #000000) fixed;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #0c280c, #000000) fixed;
+    background: #2d2d2d;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to left, #0c280c, #000000) fixed;  Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to left, #0c280c, #000000) fixed; */
     color: #ffffff;
     font-family: proxima-nova, monospace;
 }
@@ -17,6 +17,6 @@ html {
     }
 
 .fa-arrow-alt-circle-left:hover {
-    color: #296829;
+    color: #f26522;
     transform: scale(1.2);
 }
