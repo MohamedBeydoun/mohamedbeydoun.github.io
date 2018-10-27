@@ -17,6 +17,12 @@ h2 {
     padding-bottom: 3px;
 }
 
+h3 {
+    display: block;
+    font-size: 50px;
+    color: #f26522;
+}
+
 ul {
     position: relative;
     top: 25%;
