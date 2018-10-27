@@ -8,14 +8,14 @@ ul {
 li {
     list-style: none;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    padding-bottom: 30px;
 }
 
 li a {
     text-decoration: none;
     color: #ffffff;
     line-height: 50px;
-    /* margin-bottom: -10px !important; */
+    margin-bottom: -10px !important;
 }
 
 img {
