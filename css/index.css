@@ -8,13 +8,13 @@ ul {
 li {
     list-style: none;
     text-transform: uppercase;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
 }
 
 li a {
     text-decoration: none;
     color: #ffffff;
-    line-height: 50px;
+    /* line-height: 50px; */
     margin-bottom: -10px !important;
 }
 
