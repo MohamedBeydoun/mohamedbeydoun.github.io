@@ -149,12 +149,6 @@ img {
     transform-origin: left;
   }
 
-/* #mediaWheel {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-} */
-
  .circle {
     position: absolute;
     bottom: 110px;
@@ -164,6 +158,8 @@ img {
     background-color: #f26522;
     border: solid #f26522 3px;
     border-radius: 50%;
+    text-align: center;
+    vertical-align: bottom;
 }
 
 #top, #bottom, #right, #left{
@@ -205,4 +201,13 @@ img {
   -ms-transform: translateX(-60px); 
   -o-transform: translateX(-60px); 
   transform: translateX(-60px); 
+}
+
+.circle i {
+    font-size: 20px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    color: #ffffff;
 }
