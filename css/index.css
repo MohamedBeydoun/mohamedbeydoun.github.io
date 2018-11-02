@@ -156,15 +156,21 @@ img {
     height: 40px;
     width: 40px;
     background-color: #f26522;
-    border: solid #f26522 3px;
     border-radius: 50%;
     text-align: center;
     vertical-align: bottom;
 }
 
 #top, #bottom, #right, #left{
+    border: solid #2d2d2d 10px;
     opacity: 0;
     transition: 1s;
+    z-index: 0;
+}
+
+#middle {
+    border: solid transparent 10px;
+    z-index: 1;
 }
 
 #mediaWheel:hover #top {
