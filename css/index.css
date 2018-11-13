@@ -1,12 +1,17 @@
+#container > div {
+    max-height: 650px;
+} 
+
 #wrapper {
     width: 1400px;
     margin: 0 auto;
 }
 
 #container {
-    overflow: hidden;
+    /* overflow-y: hidden; */
     display: grid;
-    grid-template-columns: 0.5fr 1fr 2fr;
+    grid-template-columns: 0.6fr 1fr 2fr 0.3fr;
+    grid-auto-rows: 1fr;
 }
 
 h1 {
@@ -210,8 +215,8 @@ img {
 
 #mediaWheel {
     position: relative;
-    bottom: 400px;
-    left: 1350px;
+    top: 600px;
+    overflow: visible;
 }
 
 .circle {
