@@ -1,15 +1,26 @@
+#wrapper {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+#container {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 2fr;
+}
 
 h1 {
-    margin: 2% 0 0 4%;
+    margin: 4% 0 0 4%;
     color: rgb(242,101,34, 0.5);
     font-size: 90px;
     z-index: -2;
     /* font-family: 'Nunito Sans', sans-serif; */
     font-weight: 1;
-    display: inline-block;
+    display: block;
 }
 
 h1::after {
+    margin-left: 3px;
     content: "";
     width: 50px;
     height: 70px;
@@ -37,13 +48,6 @@ h1::after {
     }
   }
 
-ul {
-    position: absolute;
-    top: 50%;
-    left: 33%;
-    transform: translate(-50%, -50%);
-}
-
 li {
     list-style: none;
     text-transform: uppercase;
@@ -58,29 +62,31 @@ li a {
 }
 
 img {
+    margin-top: 100px; 
     width: 500px;
     height: 500px;
-    position: absolute;
+    /* position: relative;
     top: 24%;
-    left: 50%;
+    left: 50%; */
     border-radius: 50%;
     border: solid #f26522 8px;
 }
 
 #buttonList {
+    margin-top: 100px; 
     height: 100vh;
     overflow: hidden;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-display: flex;
     -webkit-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    position: absolute;
-    top: 0;
+    -webkit-flex-wrap: wrap; */
+    /* position: absolute; */
+    /* top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0; */
     justify-content: center;
     align-items: center;
     -webkit-justify-content: center;
@@ -202,10 +208,14 @@ img {
     transform-origin: left;
 }
 
+#mediaWheel {
+    position: relative;
+    bottom: 400px;
+    left: 1350px;
+}
+
 .circle {
     position: absolute;
-    bottom: 110px;
-    right: 130px;
     height: 40px;
     width: 40px;
     background-color: #f26522;
