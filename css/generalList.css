@@ -10,6 +10,34 @@ h1 {
     margin-bottom: 150px;
 }
 
+h1::after {
+    content: "";
+    width: 30px;
+    height: 50px;
+    background: #ffffff;
+    opacity: 1;
+    display: inline-block;
+  }
+  
+  .cursor::after {
+    content: "";
+    width: 30px;
+    height: 50px;
+    background: #ffffff;
+    opacity: 1;
+    display: inline-block;
+    animation: blink 0.8s linear infinite alternate;
+  }
+
+  @keyframes blink {
+    from, to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
 h2 {
     display: inline;
     font-size: 40px;
@@ -22,6 +50,14 @@ h3 {
     font-size: 50px;
     color: #f26522;
 }
+
+/* h4 {
+    color: #f26522;
+    position: relative;
+    top: -10%;
+    left: 44%;
+    font-size: 20px;
+} */
 
 ul {
     position: relative;
