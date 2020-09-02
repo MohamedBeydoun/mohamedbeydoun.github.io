@@ -4,7 +4,7 @@ import { FormattedIcon } from '@components/icons';
 import { socialMedia } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+const { colors } = theme;
 
 const StyledContainer = styled.footer`
   ${mixins.flexCenter};
@@ -35,33 +35,9 @@ const StyledSocialLink = styled.a`
     height: 20px;
   }
 `;
-const StyledMetadata = styled.div`
-  font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.xs};
-  line-height: 1;
-`;
-const StyledGitHubLink = styled.a`
-  color: ${colors.lightSlate};
-  padding: 10px;
-`;
-const StyledGitHubInfo = styled.div`
-  margin-top: 10px;
-
-  & > span {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 7px;
-  }
-  svg {
-    display: inline-block;
-    height: 15px;
-    width: auto;
-    margin-right: 5px;
-  }
-`;
 
 const Footer = () => {
-  const [githubInfo, setGitHubInfo] = useState({
+  const [, setGitHubInfo] = useState({
     stars: null,
     forks: null,
   });
@@ -100,25 +76,6 @@ const Footer = () => {
             ))}
         </StyledSocialList>
       </StyledSocial>
-      <StyledMetadata tabindex="-1">
-        <StyledGitHubLink
-          href="https://github.com/mohamedbeydoun/mohamedbeydoun.github.io"
-          target="_blank"
-          rel="nofollow noopener noreferrer">
-          {githubInfo.stars && githubInfo.forks && (
-            <StyledGitHubInfo>
-              <span>
-                <FormattedIcon name="Star" />
-                <span>{githubInfo.stars.toLocaleString()}</span>
-              </span>
-              <span>
-                <FormattedIcon name="Fork" />
-                <span>{githubInfo.forks.toLocaleString()}</span>
-              </span>
-            </StyledGitHubInfo>
-          )}
-        </StyledGitHubLink>
-      </StyledMetadata>
     </StyledContainer>
   );
 };
