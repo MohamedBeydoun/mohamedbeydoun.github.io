@@ -144,6 +144,16 @@ h4 {
   width: min(380px, 100%);
 }
 
+.search[hidden] {
+  display: none;
+}
+
+#search-fallback {
+  margin: 0 0 0 auto;
+  max-width: 380px;
+  font-size: 15px;
+}
+
 .search input {
   flex: 1;
   min-width: 0;
@@ -240,6 +250,24 @@ h4 {
   font-size: 20px;
   font-weight: 800;
   color: var(--navy);
+}
+
+.search-results {
+  overflow-wrap: anywhere;
+}
+
+#search-matches {
+  list-style: none;
+  padding: 0;
+  max-width: 860px;
+}
+
+#search-matches li {
+  margin-bottom: 24px;
+}
+
+#search-matches p {
+  margin: 0;
 }
 
 /* Home: hero and service updates */

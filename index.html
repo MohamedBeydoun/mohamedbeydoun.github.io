@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mohamed Beydoun | Staff Engineer, Security Engineering at Shopify</title>
-  <meta name="description" content="Mohamed Beydoun is a Staff Engineer in Security Engineering at Shopify, working on employee authentication and authorization. Based in Barrhaven, Ottawa.">
+  <title>Mohamed Beydoun | Staff Software Engineer, Identity and Access Management at Owner</title>
+  <meta name="description" content="Mohamed Beydoun is a Staff Software Engineer in Identity and Access Management at Owner, working on authentication and authorization. Based in Barrhaven, Ottawa.">
   <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk">
   <link rel="canonical" href="https://mohamedbeydoun.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mohamedbeydoun.com/">
-  <meta property="og:title" content="Mohamed Beydoun | Staff Engineer, Security Engineering at Shopify">
-  <meta property="og:description" content="The official website of Mohamed Beydoun, Barrhaven resident and Staff Engineer at Shopify.">
+  <meta property="og:title" content="Mohamed Beydoun | Staff Software Engineer, Identity and Access Management at Owner">
+  <meta property="og:description" content="The official website of Mohamed Beydoun, Barrhaven resident and Staff Software Engineer in Identity and Access Management at Owner.">
   <meta property="og:image" content="https://mohamedbeydoun.com/images/vimy-memorial-bridge.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="32x32">
@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300..800;1,300..800&amp;display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script src="search.js" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -35,10 +36,10 @@
           <span class="brand-word">Beydoun</span>
         </a>
         <p class="brand-tag">The official website of<br>Mohamed Beydoun</p>
-        <form class="search" action="https://github.com/MohamedBeydoun" method="get" role="search">
-          <input type="hidden" name="tab" value="repositories">
-          <label class="sr-only" for="q">Search my GitHub repositories</label>
-          <input id="q" name="q" type="search" placeholder="Search github.com/MohamedBeydoun">
+        <p id="search-fallback">To search this website, use your browser's Find command.</p>
+        <form class="search" action="#search-results" method="get" role="search" hidden>
+          <label class="sr-only" for="q">Search this website</label>
+          <input id="q" name="q" type="search" placeholder="Search this website" aria-controls="search-results">
           <button type="submit" aria-label="Search">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
           </button>
@@ -73,12 +74,19 @@
   </header>
 
   <main id="main">
-    <div class="wrap hero">
+    <section id="search-results" class="wrap page search-results" aria-labelledby="search-results-title" hidden>
+      <h2 id="search-results-title" class="page-title" tabindex="-1">Search results</h2>
+      <p id="search-status" role="status"></p>
+      <ul id="search-matches"></ul>
+      <button id="clear-search" class="btn-outline" type="button">Clear search</button>
+    </section>
+
+    <div id="overview" class="wrap hero">
       <figure class="hero-card">
         <img src="images/vimy-memorial-bridge.jpg" alt="The white steel arches of the Vimy Memorial Bridge under a cloudy sky, seen from the bridge deck" width="1800" height="1028">
         <div class="hero-label">
           <h1>Mohamed Beydoun</h1>
-          <p>Staff Engineer, Security Engineering at Shopify</p>
+          <p>Staff Software Engineer, Identity and Access Management at Owner</p>
           <a href="#work">Work and employment</a>
         </div>
         <figcaption class="hero-caption">Vimy Memorial Bridge, Barrhaven</figcaption>
@@ -90,7 +98,7 @@
           <li>
             <a href="#work">
               <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3M3 13h18"/></svg></span>
-              Shopify Security Engineering is open
+              Owner Identity and Access Management is open
             </a>
           </li>
           <li>
@@ -115,12 +123,12 @@
       </aside>
     </div>
 
-    <section class="wrap" aria-labelledby="services-title">
+    <section id="services" class="wrap" aria-labelledby="services-title">
       <h2 id="services-title" class="sr-only">Services</h2>
       <div class="services">
         <div class="service">
           <h3><a href="#work">Work and employment</a></h3>
-          <p>Shopify Security Engineering, Ubisoft, Modulis VoIP, employment history...</p>
+          <p>Owner Identity and Access Management, Shopify, Ubisoft, Modulis VoIP, employment history...</p>
         </div>
         <div class="service">
           <h3><a href="#projects">Planning, development and construction</a></h3>
@@ -157,7 +165,7 @@
       </div>
     </section>
 
-    <section class="wrap news" aria-labelledby="news-title">
+    <section id="news" class="wrap news" aria-labelledby="news-title">
       <h2 id="news-title">What's new</h2>
       <div class="news-grid">
         <article class="news-card">
@@ -190,21 +198,21 @@
     <section id="work" class="wrap page" aria-labelledby="work-title">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="#top">Home</a><span>&gt;</span><strong>Work and employment</strong></nav>
       <h2 id="work-title" class="page-title">Work and employment</h2>
-      <p class="lead">I'm a Staff Engineer in Security Engineering at Shopify. I work on the employee authentication and authorization platform: how people, their devices, and their tools prove who they are before they reach anything internal, and how that access is granted, checked, and taken away.</p>
+      <p class="lead">I'm a Staff Software Engineer in Identity and Access Management at <a href="https://www.owner.com/">Owner</a>. I work on authentication and authorization: login, sessions, permissions, and secure access for the restaurants and teams that use Owner. My background is in employee identity and access systems, including the platforms I built at Shopify.</p>
 
       <div class="two-col">
         <div>
           <h3>Employment history</h3>
           <table class="hours">
-            <tr><th scope="row">Shopify</th><td>Staff Engineer, Security Engineering</td><td>Oct 2021 - Present</td></tr>
+            <tr><th scope="row"><a href="https://www.owner.com/">Owner</a></th><td>Staff Software Engineer, Identity and Access Management</td><td>Dec 2026 - Present</td></tr>
+            <tr><th scope="row">Shopify</th><td>Staff Engineer, Security Engineering</td><td>Oct 2021 - Nov 2026</td></tr>
             <tr><th scope="row">Ubisoft</th><td>Online Programmer Intern</td><td>Jan 2020 - Aug 2020</td></tr>
             <tr><th scope="row">Modulis VoIP</th><td>Software Developer Intern</td><td>May 2019 - Dec 2019</td></tr>
           </table>
         </div>
         <div>
           <h3>Location and contact</h3>
-          <p>Shopify, Remote<br>Working from Barrhaven, Ottawa ON</p>
-          <p><strong>Platform stack:</strong> Go, Ruby on Rails, Terraform, GCP</p>
+          <p>Owner, Remote<br>Working from Barrhaven, Ottawa ON</p>
           <ul class="plain">
             <li><a href="resume.pdf">Résumé (PDF)</a></li>
             <li><a href="https://ca.linkedin.com/in/mohamed-beydoun">LinkedIn profile</a></li>
@@ -462,7 +470,7 @@
         <div>
           <h3>Get to know Mohamed</h3>
           <img class="portrait" src="images/mohamed.jpg" alt="Portrait of Mohamed Beydoun" width="200" height="200" loading="lazy">
-          <p>I'm Mohamed, a Staff Engineer in Security Engineering at Shopify. Most of my work is about access: who someone is, which device they're on, and what they should be allowed to reach. I like making the secure way the easy way, so nobody has to pick one.</p>
+          <p>I'm Mohamed, a Staff Software Engineer in Identity and Access Management at <a href="https://www.owner.com/">Owner</a>. Most of my work is about access: who someone is, which device they're on, and what they should be allowed to reach. I like making the secure way the easy way, so nobody has to pick one.</p>
           <p>I studied computer science at McGill University after a year of biology at the University of Ottawa, and interned at Modulis VoIP and Ubisoft in Montreal before joining Shopify in 2021. These days I work remotely from Barrhaven, in Ottawa's south end.</p>
           <div class="notice">
             <h3>Language services</h3>
